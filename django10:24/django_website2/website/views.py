@@ -10,5 +10,11 @@ class IndexView(TemplateView):
     
 class AboutView(TemplateView):
     template_name = "about.html"
-
-# Create your views here.
+    def get_context_data(self):
+        ctxt = super().get_context_data()
+        ctxt["num_services"] = "1232222"
+        ctxt["skills"] = [
+            # "python",
+            # "C",
+        ]
+        return ctxt
