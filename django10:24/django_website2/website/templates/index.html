@@ -1,12 +1,7 @@
+{% extends "base.html" %}
 {% load static %}
-<!doctype HTML>
-<html>
-    <head>
-        <link rel="stylesheet" href="{% static 'main.css'%}">
-    </head>
-    <body>
-        {% include "_navbar.html" %}
-        <h1>ホーム</h1>
-        {% include "_footer.html" %}
-    </body>
-</html>
+
+{% block main %}
+<h1>{{username}}さんようこそ!</h1>
+<img src="{% static 'welcome.jpg' %}"/>
+{% endblock %}
